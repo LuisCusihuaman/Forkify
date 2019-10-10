@@ -18,6 +18,9 @@ const limitRecipeTitle = (title, limit = 17) => {
 	}, 0);	
 	return `${newTitle.join(" ")} ...`;
 };
+
+
+
 const renderRecipe = recipe => {
 	const markup = `
                 <li>

@@ -13,7 +13,7 @@ export default class Recipe {
             this.img = result.data.recipe.image_url;
             this.url = result.data.recipe.source_url;
             this.ingredients = result.data.recipe.ingredients;
-		} catch (error) {
+		} catch (error) {   
             console.log(error);
             alert("Something went wrong");
 		}
@@ -24,7 +24,7 @@ export default class Recipe {
         const periods = Math.ceil(numIng / 3);
         this.time = periods * 15;
     }
-/*     calcServings(){
+     calcServings(){
         this.servings = 4;
-    } */
+    }
 }
