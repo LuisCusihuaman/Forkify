@@ -161,6 +161,16 @@ const controlLike = () => {
 	}
 	likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
+
+//Restore liked recipes on page load
+window.addEventListener("load",()=>{
+	state.likes = new Likes();
+	state.likes.readStorage();
+	likesView.toggleLikeMenu(state.likes.getNumLikes());
+	//render the existing likes
+	state.likes.likes.forEach(like => likesView.renderLike(like));
+});
+
 //Handling recipe button clicks
 elements.recipe.addEventListener("click", e => {
 
