@@ -1,3 +1,3 @@
-export const key = "13b636854a1030f7b75474d792b69850";
+export const key = "9bc8c712edddf0e8f9d327b251f6be7b";
 
 //no real sensitive data
