@@ -6,7 +6,11 @@ export const clearResult = () => {
 	elements.searchResList.innerHTML = "";
 	elements.searchResPages.innerHTML = "";
 };
-
+export const highlightSelected = id => {
+	const resultArray = Array.from(document.querySelectorAll(".results__link"));
+	resultArray.forEach(el => el.classList.remove("results__link--active"));
+	document.querySelector(`a[href="#${id}"`).classList.add("results__link--active");
+};
 const limitRecipeTitle = (title, limit = 17) => {
 	if (title.length < limit) return title;
 	const newTitle = [];
@@ -18,9 +22,6 @@ const limitRecipeTitle = (title, limit = 17) => {
 	}, 0);	
 	return `${newTitle.join(" ")} ...`;
 };
-
-
-
 const renderRecipe = recipe => {
 	const markup = `
                 <li>
@@ -37,7 +38,6 @@ const renderRecipe = recipe => {
                 `;
 	elements.searchResList.insertAdjacentHTML("beforeend", markup);
 };
-
 const createButton = (page, type) => `
     <button class="btn-inline results__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
         <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
