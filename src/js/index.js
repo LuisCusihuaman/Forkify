@@ -23,8 +23,7 @@ const controlSearch = async () => {
 	const query = searchView.getInput();
 	if (query) {
 		//2. New Search object and add to state
-		state.search = new Search(query);
-		console.log(state.search);
+		state.search = new Search(query); 
 		//3. Prepare UI for results
 		searchView.clearInput();
 		searchView.clearResult();
@@ -127,12 +126,9 @@ elements.shopping.addEventListener("click", e => {
 		state.list.updateCount(id,val);
 	}
 });
-//TESTING
 /**
  * LIKE CONTROLLER
  */
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes());
 const controlLike = () => {
 	if(!state.likes) state.likes = new Likes();
 	const currentID = state.recipe.id;
