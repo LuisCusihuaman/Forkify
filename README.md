@@ -1,4 +1,4 @@
-# How It Works " **[Forkify](https://luiscusihuaman.github.io/Forkify/docs/index.html)**"
+# How It Works " **[Forkify](https://luiscusihuaman.github.io/Forkify/)**"
 
 This is a Kitchen Recipe Finder, MVC project  to learn the advanced of Javascript ES6, 7, 8, 9 features .  This is an app that searches for recipes, modify servings and add to the shopping list & favorite recipes.
 
